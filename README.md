@@ -26,7 +26,13 @@ Various modules and percentage involved in DP-200.
 
 ## Pattern
 
+<img src="images/1.Exam-Pattern.jpg">
+
 - 7 MCP mandatory questions. (Cannot go back after selecting one answer)
+
+## Type of Data
+
+<img src="images/2.Data-Types.jpg">
 
 ## Azure Storage
 
@@ -49,4 +55,13 @@ Azure Blob Usage
   - Less cost
   - Works well with images and unstructured format
   
+## What service to use for Data?
 
+<img src="images/3.Component-Usage-1.jpg">
+
+<img src="images/4.Component-Usage-2.jpg">
+
+
+## Architecture and usage of different Azure services
+
+<img src="images/5.Architecture.jpg">
