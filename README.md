@@ -29,10 +29,10 @@ Various modules and percentage involved in DP-200.
 <img src="images/1.Exam-Pattern.jpg">
 
 - 7 MCP mandatory questions. (Cannot go back after selecting one answer)
-- CASE STUDY
-	- ENTIRE BUSINESS AND TECHNICAL REQUIREMENT
-- MIXED QUESTIONS
-	- DRAG AND DROP
+- Case Study
+	- Entire business and technical requirement
+- Mixed Questions
+	- Drag and drop
 
 ## Type of Data
 
@@ -121,20 +121,21 @@ Azure Blob Usage
 	- Joins and lookup tables
 	- Multiple databases
 
-COSMOS - DB
+## COSMOS-DB
 
-Building Globally Distributed Databases with Cosmos DB
+Can Build Globally Distributed Databases with Cosmos DB
 
-What is Azure Cosmos DB (NOSql)
-	- Scalability
-	- Performance
-	- Availability
-	- Programming Models 
+Azure Cosmos DB (NOSql)
+- Scalability
+- Performance
+- Availability
+- Programming Models 
 
-1:37 min
+## Request Units in Cosmos-DB
 
-Choose Partition-Key
+<img src="images/7.Request-Units.jpg">
 
-A physical node can have 10 GB of information that means each Unique partition Key can have 10 GB of unique values.
+## Choosing Partition-Key
 
-1:41 min
+- A physical node can have 10 GB of information that means each Unique partition Key can have 10 GB of unique values.
+
