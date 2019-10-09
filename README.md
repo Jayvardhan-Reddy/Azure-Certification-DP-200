@@ -11,7 +11,7 @@ Various modules and percentage involved in DP-200.
 	- Implement Migration
 	- Automate Datafactory pipelines
 
-3) Data Security - (15-20)
+3) Data Security - (15-20%)
 	- Managing source
 	- Managing and configuring Data Authentication
 	- Manage data policies and standards
@@ -29,6 +29,12 @@ Various modules and percentage involved in DP-200.
 <img src="images/1.Exam-Pattern.jpg">
 
 - 7 MCP mandatory questions. (Cannot go back after selecting one answer)
+
+- CASE STUDY
+	- ENTIRE BUSINESS AND TECHNICAL REQUIREMENT
+
+- MIXED QUESTIONS
+	- DRAG AND DROP
 
 ## Type of Data
 
@@ -65,3 +71,40 @@ Azure Blob Usage
 ## Architecture and usage of different Azure services
 
 <img src="images/5.Architecture.jpg">
+
+## Azure Databricks
+
+- Apache Spark-based analytics platform
+	- Simplifies the provisioning and collaboration of Apache Spark-based analytical solutions
+
+- Enterprise Security
+	- Utilizes the security capabilities of Azure
+	
+- Integration with other Cloud Services
+	- Can integrate with variety of Azure data platform services and Power BI
+	
+## Azure HD-Insight
+
+- Deploy cluster of Hadoop or Storm or Spark
+
+## Azure Active Directory
+
+- To guarantee security and manage person.
+
+- Role  and user permission to Databricks and data lake.
+
+## Reading Data in Azure Databricks
+
+| SQL | DataFrame |
+| :---: | :---: |
+| SELECT col_1 FROM myTable | df.select(col("col_1")) |
+| DESCRIBE myTable | df.printSchema() |
+| SELECT * FROM myTable WHERE col_1 > 0 | df.filter(col("col_1") > 0) |
+| ..GROUP BY col_2 | ..groupBy(col("col_2")) |
+| ..ORDER BY col_2 | ..orderBy(col("col_2")) |
+| ..WHERE year(col_3) > 1990 | ..filter(year(col("col_3"))) > 1990) |
+| SELECT * FROM myTable LIMIT 10 | df.limit(10) |
+| display(myTable)(text format) | df.show() |
+| display(myTable)(html format) | display(df) |
+
+## Performing ETL to populate a data model
