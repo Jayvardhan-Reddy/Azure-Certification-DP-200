@@ -29,10 +29,8 @@ Various modules and percentage involved in DP-200.
 <img src="images/1.Exam-Pattern.jpg">
 
 - 7 MCP mandatory questions. (Cannot go back after selecting one answer)
-
 - CASE STUDY
 	- ENTIRE BUSINESS AND TECHNICAL REQUIREMENT
-
 - MIXED QUESTIONS
 	- DRAG AND DROP
 
@@ -90,7 +88,6 @@ Azure Blob Usage
 ## Azure Active Directory
 
 - To guarantee security and manage person.
-
 - Role  and user permission to Databricks and data lake.
 
 ## Reading Data in Azure Databricks
@@ -108,3 +105,36 @@ Azure Blob Usage
 | display(myTable)(html format) | display(df) |
 
 ## Performing ETL to populate a data model
+
+<img src="images/6.ETL-DataModel.jpg">
+
+## Transformations usually performed on a dataset
+
+- Basic Transformations
+	- Normalizing values
+	- Missing/Null data
+	- De-duplication
+	- Pivoting Dataframes
+
+- Advanced Transformations
+	- User Defined functions
+	- Joins and lookup tables
+	- Multiple databases
+
+COSMOS - DB
+
+Building Globally Distributed Databases with Cosmos DB
+
+What is Azure Cosmos DB (NOSql)
+	- Scalability
+	- Performance
+	- Availability
+	- Programming Models 
+
+1:37 min
+
+Choose Partition-Key
+
+A physical node can have 10 GB of information that means each Unique partition Key can have 10 GB of unique values.
+
+1:41 min
