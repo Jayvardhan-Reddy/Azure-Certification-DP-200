@@ -191,3 +191,15 @@ Az cosmosdb database create —name $NAME —db-name $DB_NAME —resource-group 
 Az cosmosdb collection create —collection-name “Clothing“ —partition-key-path “/productId” —throughput 1000 - name $NAME —db-name $DB_NAME —resource-group $RESOURCE_GROUP
 ```
 
+## Cosmos DB fail over management
+
+
+## Cosmos DB Consistency Levels
+
+| Consistency Level | Guarantees |
+| :---: | :---: |
+| Strong | Linearizability. Reads are guaranteed to return the most recent version of an item |
+| Bounded Staleness | ConsistentPrefix. Reads lag behind writesby at most k prefixes or t interval. |
+| Session | Consisten Prefix. Monotonic reads, monotonic writes, read-your-writes, write-follows-reads. |
+| Consistent Prefix | Updates returned are some prefix of all the updates, with no gaps. |
+| Eventual | Out of order reads. |
