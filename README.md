@@ -135,7 +135,59 @@ Azure Cosmos DB (NOSql)
 
 <img src="images/7.Request-Units.jpg">
 
+Request Unit (RU) for a DB
+- A single RU is equivalent to 1 KB of Get request
+- Creation, deletion and insertion require additional processing costing more RU.
+- RU can be changed at any point of time
+- Value of RU can be set via [Capacity Planner](www.documentdb.com/capacityplanner)
+	- Upload the sample JSON doc
+	- Define no of documents
+	- Minimum RU =  400
+	- Maximum RU =  215 thousand (If we require more throughput then a ticket needs to raised in the Azure portal for it)
+
 ## Choosing Partition-Key
 
-- A physical node can have 10 GB of information that means each Unique partition Key can have 10 GB of unique values.
+- Enable quick lookup of data
+- Enable it to Autoscale when needed
+- selection of right partition key is important during development process
+- Partition key is the value used to organise your data into Logical divisions.
+	- eg: In a Retail scenario
+		- ProductID and UserID value as a partition key is a good choice.
+
+Note:
+ A physical node can have 10 GB of information that means each Unique partition Key can have 10 GB of unique values.
+ 
+ 
+### Creating a Cosmos-DB
+
+1. Click on resources and create it
+2. Click on Data Explorer to create a Database name and the table
+3. Use New Item tab to add the values to the table 
+4. UDF can also be created as Stored procedures in Javascript.
+
+We can also create the same using Azure CLI
+
+```
+az account list —output table	// Lists the set of Azure subscriptions that we have
+
+Az account set —subscription “<subscription name>”
+
+az  group list —out table	// List of resource groups 
+
+export NAME=“<Azure Cosmos DB account name>”
+
+export RESOURCE_GROUP=“<rgn>[sandbox resource group name]</rgn>”
+
+Export LOCATION=“<location>”	// Data centre location
+
+Export DB_NAME=“Products”
+
+Az group create —name <name> —location <location>
+
+Az cosmosdb create —name $NAME —kind GlobalDocumentDB —resource-group $RESOURCE_GROUP
+
+Az cosmosdb database create —name $NAME —db-name $DB_NAME —resource-group $RESOURCE_GROUP
+
+Az cosmosdb collection create —collection-name “Clothing“ —partition-key-path “/productId” —throughput 1000 - name $NAME —db-name $DB_NAME —resource-group $RESOURCE_GROUP
+```
 
