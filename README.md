@@ -396,3 +396,5 @@ CREATE STATISTICS [Month] on [StageDate] ([Month]);
 
 <img src="images/14.Event-Processing.jpg">
 
+<img src="images/15.Processing-Events-Azure-Stream-Analytics.jpg">
+
