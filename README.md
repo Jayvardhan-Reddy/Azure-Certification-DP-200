@@ -272,3 +272,120 @@ SQL-DB does not take care of consistency of data when replicated, it needs to be
  ## SQL ELASTIC POOLS :bangbang: :triangular_flag_on_post:
  
  
+## AZURE SQL-DW
+
+#### 3 types
+
+- Enterprise DW
+    - Centralized data store that provides analytics and decision support
+- Data Marts
+    - Designed for the needs of a single Team or business unit such as sales
+- Operational Data Stores
+    - Used as interim store to integrate real-time data from multiple sources for additional operations on the data.
+
+#### 2 Architectural way of building a DW
+
+-  Bottom-Up Architecture
+    - Approach based on the notion of connected Data Marts
+    - Depends on Star Schema
+    - Benefit
+        - Start departmental Data Mart
+	
+- Top-down Architecture
+    - Creating one single integrated Normalized Warehouse
+    - Internal relational constructs follow the rules of normalization
+
+#### Azure SQL-DW Advantage
+
+- Elastic scale & performance
+    - Scales to petabytes of data
+    - Massively Parallel Processing
+    - Instant-on compute scales in seconds
+    - Query Relational / Non-Relational
+    
+- Powered by the Cloud
+    - Starts in minutes
+    - Integrated with AzureML, PowerBI & ADF
+    - Enterprise Ready
+
+	
+#### Azure-DW GEN-2
+-  Max DWU is 30Kc
+- 120 connections and 128 queries
+- MPP
+
+#### Creation of Azure DW
+- Create New resource 
+- DB 
+- SQL Data Warehouse
+
+Using PolyBase to Load Data in Azure SQL Data Warehouse :bangbang: :triangular_flag_on_post:
+
+#### How PolyBase works
+
+<img src="images/9.PolyBase-Working.jpg">
+
+The MPP engine’s integration method with PolyBase
+
+- Azure SQLDW is a relational datawarehose store which use MPP architecture which takes advantage of the on demand Elastic scale of Azure compute and storage to load and process Petabytes of data
+- Transfers data between SQLDW and external resource providing the fast performance
+- Faster way to access Data Nodes
+
+PolyBase ETL for DW are
+- Extract the source data into Text file
+- Load the data into Azure Blob Storage / Hadoop DataLake store
+- Import the data into SQLDW staging table using PolyBase
+- Transform the data (optional state)
+- Insert the data into Partition tables
+
+## Create a Storage Account
+	- Go to Resource
+Blobs
+- REST-based object storage for Unstructured data.
+
+#### Import the Blob file into SQL-DW
+
+```
+CREATE MASTER KEY;
+CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
+WITH
+	IDENTITY = ‘jayDW’,
+	SECRET = ‘THE-VALUE-OF-THE-ACCESS-KEY’		-- put key1’s value here
+;
+
+CREATE EXTERNAL DATA SOURCE AzureStorage
+WITH (
+TYPE = HADOOP ,
+LOCATION = ‘wasbs://data-files@demodwstorage.blob.core.windows.net‘,
+CREDENTIAL = AzureStorageCredential
+);
+
+CREATE EXTERNAL FILE FORMAT TextFile
+WITH (
+ FORMAT_TYPE = DelimiteddText,
+FORMAT_OPTIONS (FIELD_TERMINATOR = ‘,’)
+);
+
+— Load the data from Azure Blob storage to SQL Data Warehouse
+
+CREATE TABLE [dbo].[StageDate]
+WITH (
+CLUSTERED COLUMNSTORE INDEX,
+DISTRIBUTION = ROUND_ROBIN
+)
+AS
+SELECT * FOM [dbo].[Temp];
+
+— Create statistics on the new data
+
+CREATE STATISTICS [DataKey] on [StageDate] ([DateKey]);
+CREATE STATISTICS [Quarter] on [StageDate] ([DateKey]);
+CREATE STATISTICS [Month] on [StageDate] ([Month]); 
+
+```
+
+#### Import the Blob file into SQL-DW (Alternative)
+
+<img src="images/10.ImportBlob2SqlDW-1.jpg">
+<img src="images/11.ImportBlob2SqlDW-2.jpg">
+<img src="images/12.ImportBlob2SqlDW-3.jpg">
