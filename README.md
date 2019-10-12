@@ -191,8 +191,15 @@ Az cosmosdb database create —name $NAME —db-name $DB_NAME —resource-group 
 Az cosmosdb collection create —collection-name “Clothing“ —partition-key-path “/productId” —throughput 1000 - name $NAME —db-name $DB_NAME —resource-group $RESOURCE_GROUP
 ```
 
+After creating a COSMOSDB
+- Navigate to Data Explorer
+- Click on New container and Database
+- A container can have multiple Databases
+
+
 ## Cosmos DB fail over management
 
+<img src="images/8.CosmosDB-Failove-Management.jpg">
 
 ## Cosmos DB Consistency Levels
 
@@ -203,3 +210,12 @@ Az cosmosdb collection create —collection-name “Clothing“ —partition-key
 | Session | Consisten Prefix. Monotonic reads, monotonic writes, read-your-writes, write-follows-reads. |
 | Consistent Prefix | Updates returned are some prefix of all the updates, with no gaps. |
 | Eventual | Out of order reads. |
+
+- Eventual consistency provide the weakest read consistency but offer lowest latency of both reads and writes. :bangbang: :triangular_flag_on_post:
+
+Question related to setting up latency :bangbang: :triangular_flag_on_post:
+
+What is the Latency I will have to use in order to provide the lower latency of reads and writes
+	- Eventual Consistency
+
+ COSMOS-DB takes care of consistency of data when replicated
