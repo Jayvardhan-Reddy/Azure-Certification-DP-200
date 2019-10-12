@@ -34,4 +34,45 @@
   - Azure DataBricks :heavy_check_mark:
   - Azure Data Warehouse
   
-5)   
+5) Azure Databricks encapsulates which Apache Storage technology?
+
+  - Apache Hadoop
+  - Apache Parquet
+  - Apache Spark :heavy_check_mark:
+  - Apache Kudu
+  - Apache Arrow
+
+6) Which browsers are recommended for the best use with Databricks Notebook?
+
+  - Microsoft Edge
+  - Google Chrome :heavy_check_mark:
+  - Firefox :heavy_check_mark:
+  - Apple Safari
+  - Microsoft Internet Explorer
+  
+ 7) How does Spark connect to databaes like MySQL, Hive and othe data stores?
+ 
+  - Rest API
+  - JDBC :heavy_check_mark:
+  - Azure Event Hub
+  - Spark Direct connector
+  - ODBC
+  
+ 8) You are using Cosmos DB Database. You want to ensure that there is 99.999% availability for the reading and writing of all your data. How can this be achieved?
+ 
+  - Using a Cosmos DB cluster
+  - Configuring reads and writes of data for multi-region DB :heavy_check_mark:
+  - Setting Scale read and write throughput globally
+  - Using Cosmos DB High-Availability service
+  - You only can achieve 99.9%
+  
+ 9) Using Cosmos DB, what type of data model provides a traversal language that enables connections and traversals across connected data?
+ 
+  - MongoDB API
+  - Table API
+  - Etcd API
+  - Gremlin API :heavy_check_mark:
+  - Cassandre API
+  
+ 10) 
+  
