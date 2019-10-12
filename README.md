@@ -191,7 +191,7 @@ Az cosmosdb database create —name $NAME —db-name $DB_NAME —resource-group 
 Az cosmosdb collection create —collection-name “Clothing“ —partition-key-path “/productId” —throughput 1000 - name $NAME —db-name $DB_NAME —resource-group $RESOURCE_GROUP
 ```
 
-After creating a COSMOSDB
+#### After creating a COSMOSDB
 - Navigate to Data Explorer
 - Click on New container and Database
 - A container can have multiple Databases
@@ -215,7 +215,60 @@ After creating a COSMOSDB
 
 Question related to setting up latency :bangbang: :triangular_flag_on_post:
 
-What is the Latency I will have to use in order to provide the lower latency of reads and writes
+What is the Latency I will have to use in order to provide the lower latency of reads and writes  :bangbang: :triangular_flag_on_post:
 	- Eventual Consistency
 
- COSMOS-DB takes care of consistency of data when replicated
+ COSMOS-DB takes care of consistency of data when replicated  :bangbang: :triangular_flag_on_post:
+
+## AZURE SQL DATABASE CONFIGURATION
+
+- DTUs (Database Transaction Unit)
+	- Combined measure of Compute, storage, and IO resources
+- VCores
+	- Enables you to configure resources independently
+	- Greater control over compute and storage resources 
+- SQL Elastic Pools
+	- Relate to eDTUs.
+	- Enable you to buy set of compute and storage resources that are shared among all the databases in the pool.	
+	- Each database can use the resources they need.
+- SQL Managed Instances
+	- Creates a database with near 100% compatibility with the latest SQL server.
+	- Useful for SQL Server  customers who would like t migrate on-premises servers instance in a “lift and shift” manner.
+
+### shell.azure.com to start Azure shell
+
+```
+To connect to Database
+jay@Azure:~$ az configure --defaults group=ms-dp-200 sql-server=jaysql01
+
+jay@Azure:~$ az sql db list
+O/P:
+	
+
+jay@Azure:~$ az sql db list | jq '[.[] | {name: .name}]'
+O/P:
+[
+  {
+    "name": "master"
+  },
+  {
+    "name": "sqldbjay01"
+  }
+]
+
+jay@Azure:~$ az sql db show --name sqldbjay01
+
+az sql db show-connection-string --client sqlcmd --name sqldbjay01
+O/P:
+	"sqlcmd -S tcp:<servername>.database.windows.net,1433 -d sqldbjay01 -U <username> -P <password> -N -l 30"
+
+"sqlcmd -S tcp:sqldbjay01.database.windows.net,1433 -d sqldbjay01 -U jay -P “******” -N -l 30"
+
+SELECT name FEOM sys.tables; GO
+```
+
+SQL-DB does not take care of consistency of data when replicated, it needs to be done manually. :bangbang: :triangular_flag_on_post:
+
+ ## SQL ELASTIC POOLS :bangbang: :triangular_flag_on_post:
+ 
+ 
