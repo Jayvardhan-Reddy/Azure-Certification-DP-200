@@ -400,3 +400,83 @@ CREATE STATISTICS [Month] on [StageDate] ([Month]);
 
 <img src="images/15.Processing-Events-Azure-Stream-Analytics.jpg">
 
+## ORCHESTRATING DATA MOVEMENT WITH ADF AND SECURING AZURE DATA PLATFORMS
+
+### Azure Event Hubs:
+- Is a highly scalable publish-subscribe service that can ingest millions of events per second and stream them into multiple applications
+- A Event hub is a cloud-based event service capable of receiving and assessing millions of events per second.
+- An Event is a small packet of information, a datagram that contain a notification.
+- Events can be published individually or in batch.
+- Single Publication or batch count can exceed 256KB.
+
+### Create Event Hub
+- Navigate to Entities 
+- Event Hub
+- Shared Access policies
+	- Policy will generate Primary key and Secondary key and the connection string
+
+### Configure Application to use Event Hubs
+
+<img src="images/16.Configure-Applications-to-use-Event-Hub.jpg">
+
+### Azure Stream Analytics Workflow
+
+<img src="images/17.Azure-Streeam-Analytics-Workflow.jpg">
+
+## Azure Data Factory - ADF
+- Creates, orchestrates, and automates the movement, transformation and/or analysis of data through in the cloud.
+ 
+#### The Data Factory Process
+- Connect & collect
+- Transform & Enrich
+- Publish
+- Monitor
+
+## Azure Data Factory Components
+
+<img src="images/18.ADF-Components.jpg">
+
+## Azure Data Factory Contributor Role
+- Create, edit, and delete factories and child resources including datasets, linked services, pipelines, triggers, and integration runtimes.
+- Deploy Resource Manager templates. Resource Manager deployment is the deployment method used by Data Factory in the Azure portal.
+- Manage App Insights alerts for a data factory
+- At the resource group level or above, lets users deploy Resource Manager template.
+- Create support tickets.
+
+#### Linked Services
+
+<img src="images/19.Linked-Services.jpg">
+
+#### Linked Service Example
+
+<img src="images/20.Linked-Services-Example.jpg">
+
+#### DataSets
+
+<img src="images/21.Datasets.jpg">
+
+#### Time Slicing Data
+
+<img src="images/22.Time-Slicing-Data.jpg">
+
+### Data Factory Activities
+Activities within ADF defines the actions that will be performed on the data and there are three categories including:
+- Data movement activities
+	- Simply move data from one data store to another.
+	- A common example of this is in using Copy Activity.
+- Data transformation activites
+	- Use compute resource to change or enhancedata through transformation, or it can call a compute resource to perform an analysis of the data
+- Control Activities
+	- Orchestrate pipeline activities that includes chaining activities in a sequence, branching, defining parameters at the pipeline level, and passing arguments while invoking the pipeline on-demand or from a trigger
+	
+### Pipelines
+- Pipeline is a grouping of logically related activities.
+- Pipeline can be scheduled so the activities within it get executed.
+- Pipeline can be managed and monitored.
+
+### Working with documents programmatically
+- Create Storage Account
+- Create ADF
+- Create data workflow pipeline
+- Add Databricks workbook to pipeline
+- Perform analysis on the data
