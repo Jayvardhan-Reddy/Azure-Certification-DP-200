@@ -393,3 +393,6 @@ CREATE STATISTICS [Month] on [StageDate] ([Month]);
 ## Data Streams
 
 <img src="images/13.Data-Streams.jpg">
+
+<img src="images/14.Event-Processing.jpg">
+
