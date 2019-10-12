@@ -74,5 +74,37 @@
   - Gremlin API :heavy_check_mark:
   - Cassandre API
   
- 10) 
+ 10) Which of the following terms refer to the scale of compute that is being used in an Azure SQL Data Warehouse database?
+ 
+ - DWU :heavy_check_mark:
+ - IO Unit
+ - DWM
+ - DWvCPU
+ - SLO
+ 
+11) Applications that publish messages to Azure Event Hub very frequently will get the best performance using Advanced Message Queuing Protocol (AMQP) because it establishes a persistent socket. True or False?
+ 
+ - True  :heavy_check_mark:
+ - False
+
+12) If an Event Hub goes offline before a consumer group can process the events it holds, those events will be lost. True or False?
+
+- True
+- False  :heavy_check_mark:
+
+13) Which job input consumers data streams from applications at low latencies and high throughput?
+
+- Event Grid
+- Event Hubs  :heavy_check_mark:
+- IOT HUb
+- Azure Blob storage
+- Java DarainputStream
+
+14) Streaming Analytics Query Language is a subset of which query language
+
+- CQL
+- JPQL
+- Cypher
+- HTSQL
+- T-SQL :heavy_check_mark:
   
