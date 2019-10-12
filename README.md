@@ -390,6 +390,8 @@ CREATE STATISTICS [Month] on [StageDate] ([Month]);
 <img src="images/11.ImportBlob2SqlDW-2.jpg">
 <img src="images/12.ImportBlob2SqlDW-3.jpg">
 
+#### Check Ingest Polybase in Datawarehouse :bangbang: :triangular_flag_on_post:
+
 ## Data Streams
 
 <img src="images/13.Data-Streams.jpg">
