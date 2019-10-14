@@ -108,3 +108,36 @@
 - HTSQL
 - T-SQL :heavy_check_mark:
   
+15) Which Azure Data Factory component contains the transformation logic or the analysis commands of the Azure Data Factory's work?
+
+- Pipeline
+- Control Flow
+- Trigger
+- Activities :heavy_check_mark:
+- Parameters
+
+16) A pipeline JSON definition is embedded into an Active JSON definition. 
+
+- True
+- False :heavy_check_mark:
+
+17) You wants to gain insights should any unusual activity be occurring with his storage account with minimal configuration. What can you use to acheive this?
+
+- Azure logging and auditing
+- Automatic Threat Detection :heavy_check_mark:
+- Azure App Insight
+- Azure Serverless platform security
+- Operational security service
+
+18) Encrypted communication is turned on automatically when connecting to an Azure SQL Database or Azure SQL Data Warehouse. True or False?
+
+- True
+- False :heavy_check_mark:
+
+19) Authentication for an Event hub is defined with a combination of an Event Publisher and which other component?
+
+- RBAC
+- Azure Key Vault
+- Oauth 2.0 provider
+- Azure Active Directory
+- Shared Access Signature :heavy_check_mark:
