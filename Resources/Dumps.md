@@ -141,3 +141,44 @@
 - Oauth 2.0 provider
 - Azure Active Directory
 - Shared Access Signature :heavy_check_mark:
+
+20) You want to respond to the critical consition and corrective automated actions using Azure Monitor. Which featur would you use?
+
+- Monitoring
+- Alerts :heavy_check_mark:
+- Metrics explorer
+- Azure Log Analytics
+- Azure Application Insight
+
+21) You are recieveing an error message in Azure SQL Data Warehouse, You want to view information about the service and help to solve the problem, what can you use to quickly check the availability of the service?
+
+- Polybase
+- Azure Machine Learning
+- Diagnose and solve problem :heavy_check_mark:
+- Real-time analytics
+- Event Grid
+
+22) What is the maximum number of activities per pipeline in Azure Data Factory?
+
+- 100
+- 5
+- 30
+- 40 :heavy_check_mark:
+- 500
+
+23) How long is the Recovery Point Objective for Azure SQL Data-Warehouse?
+
+- 24 hours
+- 3 hours
+- 1 hours
+- 8 hours :heavy_check_mark:
+- 1 month
+
+24) How often is a backup taken for Azure Cosmos DB?
+
+- 4 hours :heavy_check_mark:
+- 30 minutes
+- Real time
+- 10 seconds
+- 1 hour
+
