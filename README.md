@@ -480,3 +480,59 @@ Activities within ADF defines the actions that will be performed on the data and
 - Create data workflow pipeline
 - Add Databricks workbook to pipeline
 - Perform analysis on the data
+
+## MONITORING, TROUBLESHOOTING DATA STORAGE AND OPTIMIZING DATA PLATFORMS
+
+### Azure Monitor
+
+Azure Monitor provides a holistic monitoring approach by collecting, analyzing, and acting on telemetry from both cloud and on-premises environments
+
+#### Metric Data
+- Provides quantifiable information about a system over time that enables you to observe the behavior of a system.
+
+#### Log Data
+- Logs can be queried and even analyzed using Log Analytics. In addition, this information is typically presented in the overview page of an Azure Resource in the Azure portal.
+
+#### Alerts
+- Alerts notify you of critical conditions and potentially take corrective automated actions baed on triggers from metrics or logs.
+
+### Monitoring the network
+Log Analytics within Azure monitor has the capability to monitor and measure network activity.
+
+#### Network Performance Monitor
+- Measures the performace and reachability of the networks that you have configured.
+
+#### Application Gateway Analytics
+- Contains rich, out-of-the box views you can get insights into key scenarios, including:
+	- Monitor client and server errors.
+	- Check requests per hour
+
+### Connectivity Issues
+
+<img src="images/23.Connectivity-Issues.jpg">
+
+### Performance Issues (To speed up query performance)
+
+- Data Lake Storage
+	- Ensure heirarchical Namespace is enabled
+
+- SQL Database
+	- Install the latest Docment-DB SDK
+	- Use Direct mode as your connection mode  when configuring your connection policy.
+	- Increase the no of thread or tasks to decrease the wait time while fulfilling the requests.
+	- Identify and add missing indexes.
+	
+- Cosmos DB
+	- Avoid full scans on the collection, so query part of the collections
+	- All UDF's and built-in function will scan across all the documents within the query
+	- Use Direct mode as your connection mode  when configuring your connection policy.
+	- Tune the page size for querying and read feeds for better performance using the x-ms-max-itime.count.header
+	- For any partisient collections query in parallel to increase performance and leverage more throughput
+	- Use direct https connectivity mode for best performance
+	
+- Colocation of Resources
+	- Try increasing the RU between your collection
+
+- SQL Data Warehouse
+	- Ensure the statistics are up-to-date
+	- Query optimizer
