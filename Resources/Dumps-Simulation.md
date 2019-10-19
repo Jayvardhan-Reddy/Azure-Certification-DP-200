@@ -26,7 +26,7 @@ Azure offers you a combination of following technologies to accelerate real-time
     - The Spark to Azure Cosmos DB Connector
 ```
 
- <img src="images/Dumps-Simulation/1.Dumps-Simulation-Architecture.jpg">
+ <img src="/images/Dumps-Simulation/1.Dumps-Simulation-Architecture.jpg">
  
 ```    
 Note: Lambda architecture is a data-processing architecture designed to handle massive quantities of data by
@@ -85,7 +85,7 @@ databases to enable hybrid applications.
 Compare Data Sync with Transactional Replication
 ```
 
-<img src="images/Dumps-Simulation/2.Dumps-Simulation-SQL-Data-Sync.jpg">
+<img src="/images/Dumps-Simulation/2.Dumps-Simulation-SQL-Data-Sync.jpg">
 
 ```
 References:
@@ -111,13 +111,13 @@ a row in a table or a node/edge in a graph. The following table shows the mappin
 to an Azure Cosmos item:
 ```
 
-<img src="images/Dumps-Simulation/3.1.Dumps-Simulation-Cosmos.jpg">
+<img src="/images/Dumps-Simulation/3.1.Dumps-Simulation-Cosmos.jpg">
 
 ```
 An Azure Cosmos container is specialized into API-specific entities as follows:
 ```
 
-<img src="images/Dumps-Simulation/3.2.Dumps-Simulation-Cosmos.jpg">
+<img src="/images/Dumps-Simulation/3.2.Dumps-Simulation-Cosmos.jpg">
 
 ```
 References:
