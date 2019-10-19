@@ -10,3 +10,6 @@
 
 4. [Mehdi-Study-Guide](http://www.mycloudypuzzle.com/2019/02/15/azure-exam-dp-200-implementing-an-azure-data-solution/)
  
+## Videos
+
+1. [Question-Types](https://youtu.be/7CvYGpSVbkA?list=PLahhVEj9XNTdZrAYjA7mq4bH1X5cTykpH) 
