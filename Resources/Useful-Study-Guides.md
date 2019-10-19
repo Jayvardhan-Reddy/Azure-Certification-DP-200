@@ -12,4 +12,8 @@
  
 ## Videos
 
-1. [Question-Types](https://youtu.be/7CvYGpSVbkA?list=PLahhVEj9XNTdZrAYjA7mq4bH1X5cTykpH) 
+1. [Question-Types](https://youtu.be/7CvYGpSVbkA?list=PLahhVEj9XNTdZrAYjA7mq4bH1X5cTykpH)
+
+2. [SQL-Bits](https://sqlbits.com/)
+
+3. [Microsoft-Ignite](https://www.youtube.com/watch?v=FpSMVdaP8Tk&list=PLQXpv_NQsPICar3RMOsnUsIWy7OfYGg-X)
