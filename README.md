@@ -536,3 +536,31 @@ Log Analytics within Azure monitor has the capability to monitor and measure net
 - SQL Data Warehouse
 	- Ensure the statistics are up-to-date
 	- Query optimizer
+
+### Storage Issues
+- Consistency
+- Corruption
+
+### Troubleshoot Streaming data
+
+When using Stream Analytics, a Job encapsulates the stream Analytic work and is made up of three components:
+
+<img src="images/24.Troubleshoot-Streaming-Data.jpg">
+
+### Troubleshoot batch data loads
+
+When trying to resolve data load issues, it is forst pragmatic to make the holistic checks on Azure, as well as the network checks and diagnose and solve the issue check. After that, then check:
+
+<img src="images/25.Troubleshoot-Batch-Data-Loads.jpg">
+
+### Data redundancy
+
+Data redundancy is the process of storing data in multiple locations to ensure that it is highly available.
+
+<img src="images/26.-Data-Redundancy.jpg">
+
+### Disaster Recovery
+
+There should be process that are involved in backing up or preoviding failover for databases in an Azure data platform technology. Depending on circumstances, there are numerous approaches that can be adopted.
+
+<img src="images/27.Disaster-Recovery.jpg">
