@@ -310,7 +310,8 @@ SQL-DB does not take care of consistency of data when replicated, it needs to be
 
 	
 #### Azure-DW GEN-2
--  Max DWU is 30Kc
+- Introduced Cache and tempDB to pull data from remote datasets 
+- Max DWU is 30Kc
 - 120 connections and 128 queries
 - MPP
 
@@ -321,7 +322,7 @@ SQL-DB does not take care of consistency of data when replicated, it needs to be
 
 Using PolyBase to Load Data in Azure SQL Data Warehouse :bangbang: :triangular_flag_on_post:
 
-#### How PolyBase works
+#### How PolyBase works  :bangbang: :triangular_flag_on_post:
 
 <img src="images/9.PolyBase-Working.jpg">
 
@@ -481,6 +482,43 @@ Activities within ADF defines the actions that will be performed on the data and
 - Add Databricks workbook to pipeline
 - Perform analysis on the data
 
+### Network Security
+
+Securing your network from attacks and unauthorized access is an important part of any architecture.
+
+<img src="images/28.Network-Security.jpg">
+
+### Identity and Access (Azure Active Directory (AD))
+
+<img src="images/29.Identity-Access.jpg">
+
+### Encryption
+
+<img src="images/30.Encryption.jpg">
+
+### Azure Key-Vaults (2 Ques) :bangbang: :triangular_flag_on_post:
+
+- It is a centralised cloud service for storing your application secrets
+- Provides secure access capability
+- Key management can be done
+
+#### Different Keys available
+- RSA
+- EC
+
+### Managing Encryption
+
+Databases stores information that is sensititve, such as physical address, email address, and phone numbers. The following is used to protect this data:
+
+<img src="images/31.Managing-Encryption.jpg">
+
+### Azure Data Lake Storage Gen2 Security Features
+
+- Role Based Access Control
+- Posix Complaint ACL
+- AAD Oauth 2.0 Token
+- Azure Services Integration
+
 ## MONITORING, TROUBLESHOOTING DATA STORAGE AND OPTIMIZING DATA PLATFORMS
 
 ### Azure Monitor
@@ -537,7 +575,7 @@ Log Analytics within Azure monitor has the capability to monitor and measure net
 	- Ensure the statistics are up-to-date
 	- Query optimizer
 
-### Storage Issues
+### Storage Issues  :bangbang: :triangular_flag_on_post:
 - Consistency
 - Corruption
 
