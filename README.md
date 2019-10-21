@@ -24,13 +24,23 @@ Various modules and percentage involved in DP-200.
 
 5) Troubleshooting Azure services - (10 - 15%)
 
-## Pattern
+## Exam Pattern
 
 <img src="images/1.Exam-Pattern.jpg">
 
+- Duration: 210 min
+
+- Multiple choice questions around 60 including Lab consisting of around 10 small tasks to be performed on Azure Portal.
+
+- Questions would come focusing the “skills measured” topics in the [DP-200](https://www.microsoft.com/en-us/learning/exam-dp-200.aspx)
+
+- Typical questions would test the selection of Azure services for a given case study and also sequence of steps involved in implementing a solution like ingesting data from ADLS to SQL DW using polybase
+
 - 7 MCP mandatory questions. (Cannot go back after selecting one answer)
+
 - Case Study
 	- Entire business and technical requirement
+
 - Mixed Questions
 	- Drag and drop
 
@@ -40,6 +50,8 @@ Various modules and percentage involved in DP-200.
 
 ## Azure Storage
 
+A storage account is a container that groups a set of Azure Storage services together.
+
 4 configurations options available includes
 
 1) Azure Blob
@@ -48,17 +60,33 @@ Various modules and percentage involved in DP-200.
 2) Azure Files
     - Mange files or share for cloud or on premise deployment
     
-3) Azure Kubes
-    - Messaging store for reliable messaging between components
+3) Azure Queues
+    - Messaging store for reliable messaging between application components
     
 4) Azure Tables
-    - A noSql stores for schema less storage of structured data
+    - A noSql stores for schemaless storage of structured data
 
-Azure Blob Usage
+Performance: 
+- Standard allows you to have any data service (Blob, File, Queue, Table) and uses magnetic disk drives. 
+- Premium limits you to one specific type of blob called a page blob and uses solid-state drives (SSD) for storage.
+
+Access tier: 
+- Hot
+- Cold
+
+**Note:** 
+
+- Data Lake Storage(ADLS) Gen2 can be enabled in the Azure Storage. Heirarchical Namespace: 
+	- The ADLS Gen2 hierarchical namespace accelerates big data analytics workloads and enables file-level access control lists (ACLs)
+- Account kind: StorageV2 (general purpose v2) 
+	- The current offering that supports all storage types and all of the latest features	
+
+**Azure Blob Usage**
   - When we don’t have to query on the data stored
   - Less cost
   - Works well with images and unstructured format
-  
+
+
 ## What service to use for Data?
 
 <img src="images/3.Component-Usage-1.jpg">
@@ -123,7 +151,13 @@ Azure Blob Usage
 
 ## COSMOS-DB
 
-Can Build Globally Distributed Databases with Cosmos DB
+Can Build Globally Distributed Databases with Cosmos DB, it can handle
+- Document databases
+- Key value stores
+- Column family stores
+- Graph databases
+
+Azure Cosmos DB indexes every field by default
 
 Azure Cosmos DB (NOSql)
 - Scalability
@@ -602,3 +636,35 @@ Data redundancy is the process of storing data in multiple locations to ensure t
 There should be process that are involved in backing up or preoviding failover for databases in an Azure data platform technology. Depending on circumstances, there are numerous approaches that can be adopted.
 
 <img src="images/27.Disaster-Recovery.jpg">
+
+## Scenario's
+
+1. **Recommended service: Azure Cosmos-DB**
+
+- Semi-structured: because of the need to extend or modify the schema for new product
+- Azure Cosmos DB indexes every field by default
+- ACID-compliant and faster while querying compared to other services
+
+Advantages:
+
+- Latency & throughput: High throughput and low latency
+- Transactional support: Required
+- Customers require a high number of read operations, with the ability to query on many fields within the database.
+- The business requires a high number of write operations to track the constantly changing inventory.
+
+2. **Recommended service: Azure Blob storage**
+
+ - Unstructured: Product catalog data
+
+- Only need to be retrieved by ID.
+- Customers require a high number of read operations with low latency.
+- Creates and updates will be somewhat infrequent and can have higher latency than read operations.
+- Latency & throughput: Retrievals by ID need to support low latency and high throughput. Creates and updates can have higher latency than read operations.
+- Transactional support: Not required
+
+3. **Recommended service: Azure SQL Database**
+
+- Structured: Business data
+- Operations: Read-only, complex analytical queries across multiple databases
+- Latency & throughput: Some latency in the results is expected based on the complex nature of the queries.
+- Transactional support: Required
