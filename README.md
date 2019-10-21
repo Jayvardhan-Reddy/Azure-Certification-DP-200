@@ -70,7 +70,7 @@ Performance: 
 
 Access tier: 
 - Hot
-	- When the operation is frequent data retrieved.
+	- When the frequent operation is data retrieved.
 - Cold
 	- When the data is not often accessed.
 
