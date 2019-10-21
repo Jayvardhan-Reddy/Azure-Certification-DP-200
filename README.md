@@ -50,8 +50,6 @@ Various modules and percentage involved in DP-200.
 
 ## Azure Storage
 
-A storage account is a container that groups a set of Azure Storage services together.
-
 4 configurations options available includes
 
 1) Azure Blob
@@ -80,6 +78,7 @@ Access tier: 
 	- The ADLS Gen2 hierarchical namespace accelerates big data analytics workloads and enables file-level access control lists (ACLs)
 - Account kind: StorageV2 (general purpose v2) 
 	- The current offering that supports all storage types and all of the latest features	
+- A storage account is a container that groups a set of Azure Storage services together.
 
 **Azure Blob Usage**
   - When we don’t have to query on the data stored
