@@ -478,6 +478,8 @@ CREATE STATISTICS [Month] on [StageDate] ([Month]);
 
 #### Linked Services
 
+Linked services are much like connection strings, which define the connection information needed for Data Factory to connect to external resources.
+
 <img src="images/19.Linked-Services.jpg">
 
 #### Linked Service Example
