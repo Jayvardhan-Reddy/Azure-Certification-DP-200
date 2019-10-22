@@ -184,7 +184,7 @@ Request Unit (RU) for a DB
 
 - Enable quick lookup of data
 - Enable it to Autoscale when needed
-- selection of right partition key is important during development process
+- Selection of right partition key is important during development process
 - Partition key is the value used to organise your data into Logical divisions.
 	- eg: In a Retail scenario
 		- ProductID and UserID value as a partition key is a good choice.
@@ -262,13 +262,13 @@ What is the Latency I will have to use in order to provide the lower latency of 
 - VCores
 	- Enables you to configure resources independently
 	- Greater control over compute and storage resources 
-- SQL Elastic Pools
+- SQL Elastic Pools :bangbang: :triangular_flag_on_post:
 	- Relate to eDTUs.
 	- Enable you to buy set of compute and storage resources that are shared among all the databases in the pool.	
 	- Each database can use the resources they need.
 - SQL Managed Instances
 	- Creates a database with near 100% compatibility with the latest SQL server.
-	- Useful for SQL Server  customers who would like t migrate on-premises servers instance in a “lift and shift” manner.
+	- Useful for SQL Server  customers who would like to migrate on-premises servers instance in a “lift and shift” manner.
 
 ### shell.azure.com to start Azure shell
 
@@ -304,9 +304,6 @@ SELECT name FEOM sys.tables; GO
 
 SQL-DB does not take care of consistency of data when replicated, it needs to be done manually. :bangbang: :triangular_flag_on_post:
 
- ## SQL ELASTIC POOLS :bangbang: :triangular_flag_on_post:
- 
- 
 ## AZURE SQL-DW
 
 #### 3 types
