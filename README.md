@@ -500,7 +500,7 @@ Activities within ADF defines the actions that will be performed on the data and
 	- Simply move data from one data store to another.
 	- A common example of this is in using Copy Activity.
 - Data transformation activites
-	- Use compute resource to change or enhancedata through transformation, or it can call a compute resource to perform an analysis of the data
+	- Use compute resource to change or enhance data through transformation, or it can call a compute resource to perform an analysis of the data
 - Control Activities
 	- Orchestrate pipeline activities that includes chaining activities in a sequence, branching, defining parameters at the pipeline level, and passing arguments while invoking the pipeline on-demand or from a trigger
 	
