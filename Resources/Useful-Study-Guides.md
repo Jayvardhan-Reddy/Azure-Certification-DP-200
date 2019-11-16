@@ -19,3 +19,7 @@
 2. [SQL-Bits](https://sqlbits.com/)
 
 3. [Microsoft-Ignite](https://www.youtube.com/watch?v=FpSMVdaP8Tk&list=PLQXpv_NQsPICar3RMOsnUsIWy7OfYGg-X)
+
+## Azure Lab Preparation
+
+1. [Lab-Questions](https://github.com/MicrosoftLearning/DP-200-Implementing-an-Azure-Data-Solution)
