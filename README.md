@@ -668,3 +668,60 @@ Advantages:
 - Operations: Read-only, complex analytical queries across multiple databases
 - Latency & throughput: Some latency in the results is expected based on the complex nature of the queries.
 - Transactional support: Required
+
+# Tips to remember, A day prior to the Exam.
+
+| Azure Service | Use |
+| :---: | :---: |
+| Azure Data Sync | Synchronization of data between Azure Sql & On-premises SQL with bi-directional |
+| Azure SQL DB Elastic pool's | Depend on eDTUs or Vcore's and max data size |
+| Azure Data Lake Storage | Azure Storage with Hierarchical nature |
+| Azure SQL Database Managed Instance | Data Migration between On-premise & Cloud with almost 100% compatability |
+| Azure Resource Manager Templates | Used when same operation needs to be performed frequently or daily basis with minimal effort eg: Clusters |
+| Data Migration Assistant | Synchronize data and on-premises Microsoft SQL Server database to Azure SQL Database and to determine whether data will move without compatibility issues |
+| Azure Data Warehouse | Used mostly for Analytical data store |
+| Azure Data Factory | Orchestrate and manage the data lifecycle |
+| Azure Databricks (Spark)  | In memory processing (or) support for usage of Scala, Java, Python, R languages (or) Cluster scale up or scale down |
+|Data load between any of the two services SQl <=> Blob <=> Data-warehouse | 99% of the cases we use CTAS(Create Table As Select) and not any other operation such as Insert into, so on..|
+
+### Azure Data Warehouse
+
+| Azure Data Warehouse | Data distribution | Reason |
+| :---: | :---: | :---: |
+| Dimension Table | Round Robin | Data size usually less tahn 5 GB |
+| Fact Table | Hash Distributed | Data Size is huge more than 100 GB |
+
+#### Note:
+- Preferred Index type is usually Clustered Colum-Store. 
+	- eg: Similar to Parquet file.
+
+### Azure Data Factory Integration Runtime (IR) Usage
+
+<img src="images/Azure-ADF-Tip.png">
+
+### Cosmos DB Consistency level
+
+<img src="images/Azure-Cosmos-Tip.png">
+
+### Masking Data
+
+| Data Masking Attribute | Masking value |
+| :---: | :---: |
+| Default | Zero value for numeric data types (or) Mask 4 or less string data type characters |
+| Custom | Mask everything except characters at beginning and at the end |
+| Random Number | Returns a random number eg: 0 to 100 |
+| Email | Mask first letter and domain |
+|Credit card | Exposes the last four digits of the designated fields |
+
+### Perfomance Parameters
+
+| Azure Service | Parameters |
+| :---: | :---: |
+| Azure Stream Analytics | Depends on Streaming Unit |
+| Azure SQL DB | Depends on DTU's |
+| Azure Datawarehouse | Depends on Cache used. Unit measured is Data warehouse Units (DWU) |
+| Azure Cosmos DB | Depends on Data Integration Unit (or) Request Units (RU) |
+
+## Note:
+- For Labs basic portal knowledge should be sufficient but may vary based on the type of question that appears.
+- Labs may or may not be part of your exam.
