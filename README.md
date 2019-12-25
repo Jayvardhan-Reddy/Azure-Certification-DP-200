@@ -678,11 +678,11 @@ Advantages:
 | Azure Data Lake Storage | Azure Storage with Hierarchical nature |
 | Azure SQL Database Managed Instance | Data Migration between On-premise & Cloud with almost 100% compatability |
 | Azure Resource Manager Templates | Used when same operation needs to be performed frequently or daily basis with minimal effort eg: Clusters |
-| Data Migration Assistant | Synchronize data and on-premises Microsoft SQL Server database to Azure SQL Database and to determine whether data will move without compatibility issues |
-| Azure Data Warehouse | Used mostly for Analytical data store |
+| Data Migration Assistant | Synchronize data from on-premises Microsoft SQL Server database to Azure SQL Database and to determine whether data will move without compatibility issues |
+| Azure Data Warehouse | Used frequently for Analytical data store |
 | Azure Data Factory | Orchestrate and manage the data lifecycle |
 | Azure Databricks (Spark)  | In memory processing (or) support for usage of Scala, Java, Python, R languages (or) Cluster scale up or scale down |
-|Data load between any of the two services SQl <=> Blob <=> Data-warehouse | 99% of the cases we use CTAS(Create Table As Select) and not any other operation such as Insert into, so on..|
+|Data load between any of the two services SQl <=> Blob <=> Data-warehouse | 99% of the cases we use CTAS(Create Table As Select) and not other operations such as Insert into, so on..|
 
 ### Azure Data Warehouse
 
