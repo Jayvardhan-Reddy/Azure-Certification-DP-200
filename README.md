@@ -671,7 +671,7 @@ Advantages:
 
 # Tips to remember, A day prior to the Exam.
 
-| Azure Service | Use |
+| Azure Service | Purpose |
 | :---: | :---: |
 | Azure Data Sync | Synchronization of data between Azure Sql & On-premises SQL with bi-directional |
 | Azure SQL DB Elastic pool's | Depend on eDTUs or Vcore's and max data size |
