@@ -676,7 +676,7 @@ Advantages:
 | Azure Data Sync | Synchronization of data between Azure Sql & On-premises SQL with bi-directional |
 | Azure SQL DB Elastic pool's | Depend on eDTUs or Vcore's and max data size |
 | Azure Data Lake Storage | Azure Storage with Hierarchical nature |
-| Azure SQL Database Managed Instance | Data Migration between On-premise & Cloud with almost 100% compatability |
+| Azure SQL Database Managed Instance | Data Migration between On-premise & Cloud with almost 100% compatability eg: From on-premises or IaaS, self-built, or ISV provided environment to fully managed PaaS cloud environment, with as low migration effort as possible.|
 | Azure Resource Manager Templates | Used when same operation needs to be performed frequently or daily basis with minimal effort eg: Clusters |
 | Data Migration Assistant | Synchronize data from on-premises Microsoft SQL Server database to Azure SQL Database and to determine whether data will move without compatibility issues |
 | Azure Data Warehouse | Used frequently for Analytical data store |
