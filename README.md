@@ -673,7 +673,7 @@ Advantages:
 
 | Azure Service | Purpose |
 | :---: | :---: |
-| Azure Data Sync | Synchronization of data between Azure Sql & On-premises SQL with bi-directional |
+| Azure SQL Data Sync | Synchronization of data between Azure Sql & On-premises SQL with bi-directional |
 | Azure SQL DB Elastic pool's | Depend on eDTUs or Vcore's and max data size |
 | Azure Data Lake Storage | Azure Storage with Hierarchical nature |
 | Azure SQL Database Managed Instance | Data Migration between On-premise & Cloud with almost 100% compatability eg: From on-premises or IaaS, self-built, or ISV provided environment to fully managed PaaS cloud environment, with as low migration effort as possible.|
@@ -683,17 +683,45 @@ Advantages:
 | Azure Data Factory | Orchestrate and manage the data lifecycle |
 | Azure Databricks (Spark)  | In memory processing (or) support for usage of Scala, Java, Python, R languages (or) Cluster scale up or scale down |
 |Data load between any of the two services SQl <=> Blob <=> Data-warehouse | 99% of the cases we use CTAS(Create Table As Select) and not other operations such as Insert into, so on..|
+|Azure Database Migration Service (DMS) | A fully managed service designed to enable seamless migrations from multiple database sources to Azure data platforms with minimal downtime (online migrations).|
+| Database Experimentation Assistant (DEA) | Helps you evaluate a targeted version of SQL Server for a specific workload. Customers upgrading from earlier versions of SQL Server (starting with 2005) to more recent versions of SQL Server can use the analysis metrics that the tool provides.|
+| SQL Server Migration Assistant (SSMA) | A tool designed to automate database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and SAP ASE.|
 
-### Azure Data Warehouse
+### Azure Data Warehouse | Synapse Analytics
 
-| Azure Data Warehouse | Data distribution | Reason |
-| :---: | :---: | :---: |
-| Dimension Table | Round Robin | Data size usually less tahn 5 GB |
-| Fact Table | Hash Distributed | Data Size is huge more than 100 GB |
+| Azure Data Warehouse | Data distribution | Reason | Fit For |
+| :---: | :---: | :---: | :---: |
+| Small Dimension Table | Replicated | Data size usually less than 2 GB |  star schema with less than 2 GB of storage after compression |
+| Temporary/Staging Table  | Round Robin | Data size usually less than 5 GB |  No obvious joining key or good candidate column |
+| Fact Table | Hash Distributed | Data Size is huge more than 100 GB | Large dimension tables |
+
+### Azure Data Warehouse | Synapse Analytics Selection of Table Index
+
+| Type | Fit For |
+| :---: | :---: |
+| Heap | Staging or temporary table, Small tables with small lookups |
+| Clustered index | Tables with up to 100 million rows, Large tables (more than 100 million rows) with only 1-2 columns heavily used |
+| Clustered columnstore index (CCI) (default) | Large tables (more than 100 million rows) |
 
 #### Note:
 - Preferred Index type is usually Clustered Colum-Store. 
 	- eg: Similar to Parquet file.
+
+### Databricks - Cluster Configurations
+
+| |	STANDARD |	HIGH CONCURRENCY |
+| :---: | :---: | :---: |
+| **Recommended for...** | Single User | Multiple Users|
+| **Language Support** | SQL, Python, R, and Scala | SQL, Python, and R (not Scala)|
+| **Notebook Isolation** | No | Yes|
+
+### Azure Data Factory Triggers
+
+| TYPE | DESCRIPTION |
+| :---: | :---: |
+| Schedule | Runs on a wall-clock schedule (e.g. every X mins/h/d/w/m's).|
+| Tumbling Window | A series of fixed-sized, non-overlapping, and contiguous time intervals.|
+| Event-based |	Runs pipelines in response to an event (e.g. Blob Created/Deleted).|
 
 ### Azure Data Factory Integration Runtime (IR) Usage
 
@@ -703,15 +731,23 @@ Advantages:
 
 <img src="images/Azure-Cosmos-Tip.png">
 
-### Masking Data
+### Cosmos DB Entities by API
 
-| Data Masking Attribute | Masking value |
-| :---: | :---: |
-| Default | Zero value for numeric data types (or) Mask 4 or less string data type characters |
-| Custom | Mask everything except characters at beginning and at the end |
-| Random Number | Returns a random number eg: 0 to 100 |
-| Email | Mask first letter and domain |
-|Credit card | Exposes the last four digits of the designated fields |
+| ENTITY | SQL | CASSANDRA | MONGODB | GREMLIN | TABLE |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| **Container** | Container | Table | Collection | Graph | Table |
+| **Item** | Document | Row | Document | Node or Edge | Item |
+| **Database** | Database | Keyspace | Database | Database | N/A |
+
+### Azure SQL DB Dynamic Data Masking
+
+| Data Masking Attribute | Masking value | Example |
+| :---: | :---: | :---: |
+| Default | Zero value for numeric data types (or) Mask 4 or less string data type characters | Default value (0, xxxx, 01-01-1900) |
+| Custom | Mask everything except characters at beginning and at the end | Custom string (prefix [padding] suffix) |
+| Random Number | Returns a random number | Random number range eg: 0 to 100 |
+| Email | Mask first letter and domain | aXX@XXXX.com |
+|Credit card | Exposes the last four digits of the designated fields | XXXX-XXXX-XXXX-1234 |
 
 ### Perfomance Parameters
 
