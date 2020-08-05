@@ -761,3 +761,7 @@ Advantages:
 ## Note:
 - For Labs basic portal knowledge should be sufficient but may vary based on the type of question that appears.
 - Labs may or may not be part of your exam.
+
+## Connect or follow my posts on Linkedin if you would like to know more about Azure & BigData.
+
+## Linkedin: [Jayvardhan Reddy](https://www.linkedin.com/in/jayvardhan-reddy-vanchireddy/)
